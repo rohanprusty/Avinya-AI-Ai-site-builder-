@@ -26,8 +26,10 @@ Turn a **simple prompt into a fully functional website in seconds**
 Generate **complete websites from simple prompts**
 
 Example prompt:
-Create a portfolio website for a photographer with dark theme
 
+```
+Create a portfolio website for a photographer with dark theme
+```
 
 AI automatically generates:
 
@@ -44,11 +46,11 @@ Chat with AI to modify your website.
 
 Example prompts:
 
-
+```
 Make the navbar sticky
 Add a pricing section
 Change theme to dark mode
-
+```
 
 ---
 
@@ -140,26 +142,26 @@ Stripe handles:
 
 # 🏗️ System Architecture
 
-
+```
 User
-│
-│ Prompt
-▼
+ │
+ │ Prompt
+ ▼
 Frontend (React + Vite)
-│
-│ API Request
-▼
+ │
+ │ API Request
+ ▼
 Backend (Node.js + Express)
-│
-├── Authentication (Better Auth)
-│
-├── AI Generation (OpenRouter API)
-│
-├── Payments (Stripe)
-│
-▼
+ │
+ ├── Authentication (Better Auth)
+ │
+ ├── AI Generation (OpenRouter API)
+ │
+ ├── Payments (Stripe)
+ │
+ ▼
 Database (PostgreSQL + Prisma)
-
+```
 
 ---
 
@@ -202,15 +204,33 @@ Database (PostgreSQL + Prisma)
 ```bash
 git clone https://github.com/rohanprusty/Avinya-AI-Ai-site-builder-.git
 cd Avinya-AI-Ai-site-builder-
-2️⃣ Install Dependencies
-Server
+```
+
+---
+
+## 2️⃣ Install Dependencies
+
+### Server
+
+```bash
 cd server
 npm install
-Client
+```
+
+### Client
+
+```bash
 cd client
 npm install
-3️⃣ Setup Environment Variables
-server/.env
+```
+
+---
+
+## 3️⃣ Setup Environment Variables
+
+### server/.env
+
+```
 DATABASE_URL=postgresql://username:password@localhost:5432/avinya_ai
 
 OPENROUTER_API_KEY=your_api_key
@@ -224,25 +244,56 @@ BETTER_AUTH_SECRET=secret
 BETTER_AUTH_URL=http://localhost:3000
 
 TRUSTED_ORIGINS=http://localhost:5173
-client/.env
+```
+
+---
+
+### client/.env
+
+```
 VITE_BASE_URL=http://localhost:3000
-4️⃣ Database Setup
+```
+
+---
+
+## 4️⃣ Database Setup
+
+```bash
 cd server
 
 npx prisma migrate dev
 npx prisma generate
-5️⃣ Run Application
-Backend
+```
+
+---
+
+## 5️⃣ Run Application
+
+### Backend
+
+```bash
 cd server
 npm run server
-Frontend
+```
+
+### Frontend
+
+```bash
 cd client
 npm run dev
+```
 
 Visit:
 
+```
 http://localhost:5173
-📁 Project Structure
+```
+
+---
+
+# 📁 Project Structure
+
+```
 avinya-ai
 │
 ├── client
@@ -261,53 +312,90 @@ avinya-ai
 │   └── config
 │
 └── README.md
-🔌 API Endpoints
-Authentication
+```
+
+---
+
+# 🔌 API Endpoints
+
+## Authentication
+
+```
 /api/auth/*
-User
+```
+
+## User
+
+```
 GET /api/user/projects
 GET /api/user/credits
 POST /api/user/project
-Project
+```
+
+## Project
+
+```
 POST /api/project/revision/:projectId
 PUT /api/project/save/:projectId
 DELETE /api/project/delete/:projectId
 GET /api/project/preview/:projectId
-Gallery
-GET /api/project/published
-🤝 Contributing
+```
 
-1️⃣ Fork the repository
+## Gallery
+
+```
+GET /api/project/published
+```
+
+---
+
+# 🤝 Contributing
+
+1️⃣ Fork the repository  
 
 2️⃣ Create feature branch
 
+```bash
 git checkout -b feature/new-feature
+```
 
 3️⃣ Commit changes
 
+```bash
 git commit -m "Added new feature"
+```
 
 4️⃣ Push
 
+```bash
 git push origin feature/new-feature
+```
 
 5️⃣ Open Pull Request
 
-📝 License
+---
+
+# 📝 License
 
 MIT License
 
-👨‍💻 Author
-Rohan Kumar Prusty
+---
 
-ECE Student — IIITDM Jabalpur
+# 👨‍💻 Author
+
+### Rohan Kumar Prusty
+
+ECE Student — IIITDM Jabalpur  
 AI | MERN | Machine Learning
 
 GitHub:
 
 https://github.com/rohanprusty
+
+---
+
 <div align="center">
 
-⭐ Star this repository if you like the project
+⭐ **Star this repository if you like the project**
 
-</div> ```
+</div>
